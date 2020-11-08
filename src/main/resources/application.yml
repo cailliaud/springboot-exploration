@@ -1,0 +1,30 @@
+server:
+  port: 8080
+  error:
+    include-message: ALWAYS
+    include-stacktrace: NEVER
+
+
+
+spring:
+  banner:
+    location: classpath:custom-banner.txt
+  flyway:
+    enabled: true
+    encoding: UTF-8
+  jpa:
+    generate-ddl: false
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  datasource:
+    url: jdbc:h2:file:C:/Users/caill/IdeaProjects/spring-testing/data
+    driverClassName: org.h2.Driver
+    username: dbuser
+    password: dbpass
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+  version: 1.0
